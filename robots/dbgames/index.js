@@ -1,6 +1,5 @@
-import { logger, dataFilePath } from "./settings.js"
 import getDragonPagesData from "./items/dragons.js"
-import state from "../../utils/state.js"
+import { logger} from "./settings.js"
 
 export default (async () => {
     logger.log("Starting...")
@@ -8,7 +7,8 @@ export default (async () => {
     const content = {}
 
     await getDragonPagesData(content)
-    await state.save(content, dataFilePath)
 
     logger.log("Finished!")
+
+    return content
 })

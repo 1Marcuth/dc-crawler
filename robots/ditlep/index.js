@@ -1,11 +1,9 @@
-import { logger, dataFilePath } from "./settings.js"
-import state from "../../utils/state.js"
-
 import getDragonsData from "./items/dragons/all/index.js"
 import getAllianceChestsData from "./alliance-chests.js"
 import getIslandsData from "./islands/index.js"
 import getDragonTVData from "./dragon-tv.js"
 import getQuestsData from "./quests.js"
+import { logger } from "./settings.js"
 
 export default (async () => {
     logger.log("Starting...")
@@ -18,6 +16,8 @@ export default (async () => {
     await getDragonTVData(content)
     await getDragonsData(content)
     //await getItemsData(content)
+
+    logger.log("Finished!")
     
-    await state.save(content, dataFilePath)
+    return content
 })

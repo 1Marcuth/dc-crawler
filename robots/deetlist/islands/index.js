@@ -1,4 +1,4 @@
-import getPageDOMDocument from "../../../utils/dom-document.js"
+import getPageDocument from "../../../utils/dom-document.js"
 import { parseIslandName } from "../../../utils/island-name.js"
 import {
     dragonElementsNames,
@@ -23,7 +23,7 @@ async function getIslandsData(content) {
         logger.log("Requesting page and parsing data from Heroic Race...")
 
         const url = `${baseUrl}/events/race/`
-        const document = await getPageDOMDocument(logger, url)
+        const document = await getPageDocument(logger, url)
 
         const $islandDurationTitle = document.querySelector(".dur_text")
         const $islandName = document.querySelector("h1")
@@ -254,7 +254,7 @@ async function getIslandsData(content) {
         logger.log("Requesting page and parsing data from Maze Island...")
 
         const url = `${baseUrl}/events/maze/`
-        const document = await getPageDOMDocument(logger, url)
+        const document = await getPageDocument(logger, url)
 
         const $islandDurationTitle = document.querySelector(".dur_text")
         const $islandName = document.querySelector("h1")
@@ -449,7 +449,7 @@ async function getIslandsData(content) {
         console.log("> [deetlist-robot] Requesting page and parsing data from Grid Island")
 
         const url = `${baseUrl}/events/grid/`
-        const document = await getPageDOMDocument(logger, url)
+        const document = await getPageDocument(logger, url)
 
         const $isalndName = document.querySelector("h1")
         const $islandDurationTitle = document.querySelector(".dur_text")
@@ -556,7 +556,7 @@ async function getIslandsData(content) {
         console.log("> [deetlist-robot] Requesting page and parsing data from Fog Island")
 
         const url = `${baseUrl}/events/fog/`
-        const document = await getPageDOMDocument(logger, url)
+        const document = await getPageDocument(logger, url)
 
         const $isalndName = document.querySelector("h1")
         const $islandDurationTitle = document.querySelector(".dur_text")
@@ -663,7 +663,7 @@ async function getIslandsData(content) {
         console.log("> [deetlist-robot] Requesting page and parsing data from Tower Island")
 
         const url = `${baseUrl}/events/tower/`
-        const document = await getPageDOMDocument(logger, url)
+        const document = await getPageDocument(logger, url)
 
         const $isalndName = document.querySelector("h1")
         const $islandDurationTitle = document.querySelector(".dur_text")
@@ -770,7 +770,7 @@ async function getIslandsData(content) {
         console.log("> [deetlist-robot] Requesting page and parsing data from Puzzle Island")
 
         const url = `${baseUrl}/events/puzzle/`
-        const document = await getPageDOMDocument(logger, url)
+        const document = await getPageDocument(logger, url)
 
         const $isalndName = document.querySelector("h1")
         const $islandDurationTitle = document.querySelector(".dur_text")
@@ -881,7 +881,7 @@ async function getIslandsData(content) {
         console.log("> [deetlist-robot] Requesting page and parsing data from Runner Island")
 
         const url = `${baseUrl}/events/puzzle/`
-        const document = await getPageDOMDocument(logger, url)
+        const document = await getPageDocument(logger, url)
 
         const $isalndName = document.querySelector("h1")
         const $islandDurationTitle = document.querySelector(".dur_text")

@@ -1,11 +1,13 @@
-import localization from "./localization/index.js"
-import ditlep from "./ditlep/index.js"
-import deetlist from "./deetlist/index.js"
-import dbgames from "./dbgames/index.js"
+import localization from "./robots/localization/index.js"
+import deetlist from "./robots/deetlist/index.js"
+import dbgames from "./robots/dbgames/index.js"
+import ditlep from "./robots/ditlep/index.js"
 
-export default {
+const robots = {
     localization,
-    ditlep,
     deetlist,
-    dbgames
+    dbgames,
+    ditlep
 }
+
+export default robots

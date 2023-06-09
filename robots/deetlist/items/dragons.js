@@ -1,4 +1,4 @@
-import getPageDOMDocument from "../../../utils/dom-document.js"
+import getPageDocument from "../../../utils/dom-document.js"
 import {
     dragonElementsNames,
     baseUrl,
@@ -9,7 +9,7 @@ async function getDragonsData(content) {
     console.log("> [deetlist-robot] Requesting page and parsing data from all dragons...")
 
     const url = `${baseUrl}/all-dragons/`
-    const document = await getPageDOMDocument(logger, url)
+    const document = await getPageDocument(logger, url)
     
     const $dragonsScript = document.querySelector("#q_src ~ script")
     const $dragons = document.querySelectorAll(".drag_link:has(.drag)")

@@ -1,4 +1,4 @@
-import getPageDOMDocument from "../../../utils/dom-document.js"
+import getPageDocument from "../../../utils/dom-document.js"
 import { logger, baseUrl } from "../settings.js"
 
 async function getDragonPagesData(content) {
@@ -23,7 +23,7 @@ async function getDragonPagesData(content) {
 
     async function getTotalOfPages() {
         requestOptions.params.p = 1
-        const document = await getPageDOMDocument(logger, url, requestOptions)
+        const document = await getPageDocument(logger, url, requestOptions)
         const $lastPageLink = document.querySelector(".prwr-hrz+ .listlink a:nth-child(17)")
         const totalOfPages = getPageNumber($lastPageLink)
 
@@ -38,7 +38,7 @@ async function getDragonPagesData(content) {
     async function getDragonPageData(pageNumber) {
         requestOptions.params.p = pageNumber
 
-        const document = await getPageDOMDocument(logger, url, requestOptions)
+        const document = await getPageDocument(logger, url, requestOptions)
         const $dragons = document.querySelectorAll(".result-data")
 
         const dragons = []

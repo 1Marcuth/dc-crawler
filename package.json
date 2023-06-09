@@ -1,0 +1,29 @@
+{
+  "name": "dc-crawler",
+  "version": "1.0.0",
+  "description": "A set of Web Scraping robots to get Dragon City data from websites.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1Marcuth/dc-crawler.git"
+  },
+  "keywords": [
+    "dragon",
+    "city",
+    "crawler",
+    "deetlist",
+    "dbgames",
+    "ditlep",
+    "events",
+    "localization"
+  ],
+  "author": "Marcuth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1Marcuth/dc-crawler/issues"
+  },
+  "homepage": "https://github.com/1Marcuth/dc-crawler#readme"
+}
